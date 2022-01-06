@@ -1,26 +1,22 @@
+import { Container } from '@mui/material';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BookCard from './components/molecules/BookCard';
+import Header from './components/organism/Header';
+import img from './img.png';
+import { StyledEngineProvider } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <StyledEngineProvider injectFirst>
+      <Container maxWidth={'xl'}>
+        <Header/>
+      </Container>
+
+    </StyledEngineProvider>
     </div>
   );
 }
 
 export default App;
+/* <BookCard img={img} title='The Lean Startup' author='Eric Ries' time='13-minute read'/> */
