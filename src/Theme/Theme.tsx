@@ -1,50 +1,39 @@
-export {};
-// import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: "#2CE080",
-//     },
-//     secondary: {
-//       main: '#0365F2',
-//     }
-//   },
-//   typography:{
-//     h1:{
-//       fontSize:36,
-//       lineHeight:45,
-//       fontFamily:'Cera pro'
-//     },
-//     subtitle1:{
-//       fontSize:24,
-//       lineHeight:32,
-//       fontFamily:'Cera pro'
-//     },
-//     subtitle2:{
-//       fontSize:18,
-//       lineHeight:24,
-//       fontFamily:'Cera pro'
-//     },
-//     body1:{
-//       fontSize:16,
-//       lineHeight:24,
-//       fontFamily:'Cera pro'
-//     },
-//     body2:{
-//       fontSize:16,
-//       lineHeight:24,
-//       fontFamily:'Cera pro'
-//     },
-//     caption:{
-//         fontSize:14,
-//         lineHeight:22,
-//         fontFamily:'Cera pro'
-//       },
+declare module '@mui/material/styles' {
+    interface TypographyVariants {
+      body3: React.CSSProperties;
+      subtitle3: React.CSSProperties;
+      caption2: React.CSSProperties;
+    }
+  
+    // allow configuration using `createTheme`
+    interface TypographyVariantsOptions {
+      body3?: React.CSSProperties;
+      subtitle3: React.CSSProperties;
+      caption2: React.CSSProperties;
+    }
+  }
+  declare module '@mui/material/Typography' {
+    interface TypographyPropsVariantOverrides {
+      body3: true;
+      subtitle3:true;
+      caption2: true;
+    }
+  }
 
 
-//   },
-// });
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2CE080",
+    },
+    secondary: {
+      main: '#0365F2',
+    }
+  },
+    
+});
 
-// export default theme;
+export default theme;

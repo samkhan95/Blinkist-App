@@ -1,19 +1,18 @@
-import { Container } from '@mui/material';
+import './App.css';
 import React from 'react';
-import BookCard from './components/molecules/BookCard';
-import Header from './components/organism/Header';
-import img from './img.png';
-import { StyledEngineProvider } from '@mui/material';
+import Home from './components/Pages/Home';
+import BookState from './components/molecules/Tabs';
+import ExpandNav from './components/molecules/Expandnav/ExpandNav';
+// import BookCard from './components/molecules/BookCard';
+// import img from './img.png';
+
 
 function App() {
   return (
     <div className="App">
-    <StyledEngineProvider injectFirst>
-      <Container maxWidth={'xl'}>
-        <Header/>
-      </Container>
-
-    </StyledEngineProvider>
+      <Home/>
+      {/* <BookState/> */}
+    
     </div>
   );
 }

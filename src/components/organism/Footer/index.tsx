@@ -1,59 +1,67 @@
-import { Box } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import Button from '../../atoms/Button';
-import img1 from './Blinkist.png';
+import img1 from './blinkist.png';
+import { Container } from '@mui/material';
+
+export const StyledTypography = styled(Typography)`
+    line-height:2;
+    font-size:16;
+    font-family:Cera Pro;
+    color:#6D787E;
+
+`;
+
+
 
 const Footer = () => {
     return (
         <>
-        <Box >
-            <Box>
-                <Box >
-                    <Box>
-                        <img src={img1} alt="Blinkist logo" />
+        <Container sx={{width:1440}}>
+        <Box sx={{bgcolor:'#F1F6F4',mt:10,pt:10,height:300}}>
+            <Box sx={{display:'flex',justifyContent:'space-around'}}>
+                <Box sx={{display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+                    <Box sx={{width:'99px',height:'24px'}}>
+                        <img src={img1} alt="Blinkist logo" width={119} height={54} />
                     </Box>
-                    <Box>
-                        <h3>Big ideas in small packages </h3> 
-                        <h3>Start learning now</h3>
+                    <Box sx={{mb:2}}>
+                        <Typography variant='subtitle1' sx={{fontSize:24,color:'blue',fontWeight:500}}>Big ideas in small packages </Typography> 
+                        <Typography variant='subtitle1' sx={{fontSize:24,color:'blue',fontWeight:500}}>Start learning now</Typography>
                     </Box>
                 </Box>
-                <Box>
-                        <ul><strong>Editorial</strong>
-                            <li>Book lists</li>
-                            <li>What is Nonfiction?</li>
-                            <li>What to Read Next</li>
-                            <li>Benefits of Reading</li>
-                        </ul>
+                    <Box>
+                        <StyledTypography sx={{color:'black'}}><strong>Editorial</strong></StyledTypography>
+                            <StyledTypography>Book lists</StyledTypography>
+                            <StyledTypography>What is Nonfiction?</StyledTypography>
+                            <StyledTypography>What to Read Next?</StyledTypography>
+                            <StyledTypography>Benefits of Reading</StyledTypography>
                     </Box>
                     <Box>
-                        <ul><strong>Useful links</strong>
-                            <li>Pricing</li>
-                            <li>Blinkist Business</li>
-                            <li>Gift Cards</li>
-                            <li>Benefits of Reading</li>
-                            <li>Blinkist Magazine</li>
-                            <li>Contact & Help</li>
-                        </ul>
+                        <StyledTypography sx={{color:'black'}}><strong>Useful links</strong></StyledTypography>
+                            <StyledTypography>Pricing</StyledTypography>
+                            <StyledTypography>Blinkist Business</StyledTypography>
+                            <StyledTypography>Gift Cards</StyledTypography>
+                            <StyledTypography>Benefits of Reading</StyledTypography>
+                            <StyledTypography>Blinkist Magazine</StyledTypography>
+                            <StyledTypography>Contact & Help</StyledTypography>
                     </Box>
                     <Box>
-                        <ul><strong>Company</strong>
-                            <li>About</li>
-                            <li>Careers</li>
-                            <li>Partners</li>
-                            <li>Code of Conduct</li>
-                        </ul>
+                        <StyledTypography sx={{color:'black'}}><strong>Company</strong></StyledTypography>
+                            <StyledTypography>About</StyledTypography>
+                            <StyledTypography>Careers</StyledTypography>
+                            <StyledTypography>Partners</StyledTypography>
+                            <StyledTypography>Code of Conduct</StyledTypography>
                     </Box>
             </Box>
-            <Box>
-                <Box>
+                <Box sx={{textAlign:'center', ml:-4,pt:5}}>
                     <Button label="Blinkist 2021"/> |
                     <Button label="Sitemap"/> |
                     <Button label="Disclaimer"/> |
                     <Button label="Terms of service"/> |
                     <Button label="Privacy Policies"/>
                 </Box>
-            </Box>
                 
         </Box>
+        </Container>
     </>
     );
 };

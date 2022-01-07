@@ -11,6 +11,6 @@ export default {
 
 export  const primary= ()=> {
     return(
-        <BookCard img={img} title='The Lean Startup' author='Eric Ries' time='13-minute read'/>
+        <BookCard image={img} title='The Lean Startup' author='Eric Ries' time='13-minute read'/>
     );
 }
