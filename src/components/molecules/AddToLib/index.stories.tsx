@@ -1,15 +1,15 @@
 import React from 'react';
 import { Meta} from '@storybook/react';
-import Footer from ".";
+import { AddToLib } from '.';
 
 
 export default {
-    title: 'organisms/Footer',
-    component: Footer,
+    title: 'molecules/AddToLib',
+    component: AddToLib,
   } as Meta;
 
 export  const primary= ()=> {
     return(
-        <Footer></Footer>
+       <AddToLib/>
     );
 }

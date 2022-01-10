@@ -25,21 +25,21 @@ const Template: Story<ButtonProps> = (args) => <Button {...args}/>
 
 export const Primary = Template.bind({});
 Primary.args = {
-    label:'Button',
+    children:'Button',
     size:'medium',
     variant:'contained',
 
 };
 export const Large = Template.bind({});
 Large.args = {
-    label: 'Button',
+    children: 'Button',
     size: 'large',
     variant:'outlined'
 };
 
 export const Small = Template.bind({});
 Small.args = {
-    label: 'Button',
+    children: 'Button',
     size: 'small',
     variant:'text'
 };

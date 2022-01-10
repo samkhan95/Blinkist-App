@@ -1,21 +1,39 @@
 import './App.css';
 import React from 'react';
-import Home from './components/Pages/Home';
-import BookState from './components/molecules/Tabs';
-import ExpandNav from './components/molecules/Expandnav/ExpandNav';
-// import BookCard from './components/molecules/BookCard';
-// import img from './img.png';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './Theme/Theme';
+import { Entrepreneurship } from './components/Pages/Enterpreneurship  page';
+import Home from './components/Pages/Home/Home';
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
+import { BookDetailsView } from './components/Pages/BookDetailsView';
+import Header from './components/organism/Header';
+import { Box, Container } from '@mui/material';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-      {/* <BookState/> */}
-    
-    </div>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+          <Routes>
+                  <Route>
+                  <Route path="/" element={<Home />} />
+                  <Route path="Entrepreneurship" element={<Entrepreneurship />} />
+                  <Route path="Entrepreneurship/BookDetailsView" element={<BookDetailsView />} />
+                  </Route>
+
+          </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
   );
 }
 
 export default App;
-/* <BookCard img={img} title='The Lean Startup' author='Eric Ries' time='13-minute read'/> */
+
+
+
+{/* <Box sx={{display:'flex',justifyContent:'center'}}>
+<Header/>
+
+</Box> */}

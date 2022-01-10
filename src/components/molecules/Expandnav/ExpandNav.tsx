@@ -14,17 +14,17 @@ import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalance
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
-import {FaBullseye, FaChartLine, FaHistory, FaHourglassEnd, FaLandmark, FaLeaf, FaMedal, FaRegHospital, FaRegLightbulb} from "react-icons/fa"
+import {FaBullseye, FaChartLine, FaHistory, FaHourglassEnd, FaLandmark, FaLeaf, FaRegHospital, FaRegLightbulb} from "react-icons/fa"
 import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
 import FiberSmartRecordOutlinedIcon from '@mui/icons-material/FiberSmartRecordOutlined';
+import { Link } from 'react-router-dom';
 
 
 const style = {
   position: 'absolute' as 'absolute',
-  top: '47%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 1440,
+  top: '88%',
+  left: '-30%',
+  width: 1430,
   height:398,
   bgcolor: '#F1F6F4',
   border: '2px solid #000',
@@ -40,7 +40,7 @@ const FBox = styled(Box)`
 `;
 
 const Constyle = {
-  maxWidth:940,
+  width:920,
   height:398,
   pt:'30px',
   pb:'32px',
@@ -60,12 +60,21 @@ const StyledTypography = styled(Typography)`
   font-size:16px;
   font-weight:400;
   font-family:Cera Pro;
+  padding-left:8px;
   color:#6D787E;
   &:hover{
     color:#116BE9;
 
   }
 `;
+
+  const StyledLink = styled(Link)`
+    color:#6D787E;
+    text-decoration:none;
+    &:hover{
+      color:#116BE9;
+    }
+  `;
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -88,30 +97,26 @@ const UBox = styled(Box)`
   }
 `;
 
+
    
 export default function ExpandNav() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => setOpen(!open);
   const handleClose = () => setOpen(false);
   
-  const [expanded, setExpanded] = React.useState(false);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  
 
 
   return (
     <>
-        <Button onClick={handleOpen}>
+        <Button onClick={handleOpen} sx={{textTransform:'none'}}>
           <UBox sx={{display:'flex',alignItems:'center',borderBottom:'4px solid white'}}>
                     <Typography sx={{color:"black",cursor:'pointer'}} fontSize={16}>
                             Explore
                         </Typography>
                           <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
+                            expand={open}
+                            onClick={handleClose}
                                   >
                             <ExpandMoreIcon sx={{color:'black',cursor:'pointer',ml:-0.5}}/>
                                                           
@@ -120,12 +125,7 @@ export default function ExpandNav() {
           </UBox>
 
         </Button>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
+       {open && <Box onClick={handleClose} sx={{zIndex:100,width:1440}}>
           <Box sx={style}>
             <Container sx={Constyle}>
               <Stack direction='row' spacing='130px' sx={{pb:'24px'}}>
@@ -144,14 +144,14 @@ export default function ExpandNav() {
                 <Stack direction='column' spacing='20.11px'>
                   <FBox>
                       <NotificationImportantOutlinedIcon fontSize='small'/>
-                      <StyledTypography >
-                        Entrepreneurship
+                     <StyledTypography sx={{textDecoration:'none'}}>
+                       <StyledLink to="/Entrepreneurship">Entrepreneurship</StyledLink>
                       </StyledTypography >
 
                   </FBox>
 
                   <FBox>
-                      <ScienceOutlinedIcon fontSize='small'/>
+                      <ScienceOutlinedIcon fontSize='small' />
                       <StyledTypography >
                         Science
                       </StyledTypography >
@@ -260,7 +260,7 @@ export default function ExpandNav() {
             </Box>
           </Container>
         </Box>
-      </Modal>
+      </Box>}
     </>
   );
 }

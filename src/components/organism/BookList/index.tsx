@@ -1,31 +1,21 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import BookCard from "../../molecules/BookCard";
-import books from "../../../db1.json";
-import { Typography } from "@mui/material";
-import BookState from "../../molecules/Tabs";
-
+import books from "../../../data/db1.json";
 
 export const BookList =()=>{
     return(
       <>
-        <Box sx={{width:200,height:45,mt:4,mb:8}}>
-        <Typography variant="h1" sx={{ fontSize: 36, fontWeight: 700,ml:2 }}>
-          My Library
-        </Typography>
+      <Box sx={{maxWidth:1440,maxHeight:1443}}>
+          <Container sx={{width:923,ml:-6}}>
+              <Grid container rowSpacing='25px' columnSpacing={{ xs: 12, sm: 12, md: 12 }}>
+                {books.map((book) => (
+                  <BookCard {...book} />
+                ))}
+              </Grid>
+          </Container>
         </Box>
-        <Box sx={{}}>
 
-        </Box>
-        <Grid container spacing={5} sx={{mt:10,ml:-2}}>
-          {books.map((book) => (
-            <BookCard {...book} />
-          ))}
-        </Grid>
-        
-        
-      </>
-
-
+        </>
 
     );
 }

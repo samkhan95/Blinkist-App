@@ -1,12 +1,15 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import { Box, CardMedia, Grid, ListItem, ListItemIcon } from '@mui/material';
+import { Box, CardMedia, Grid} from '@mui/material';
 import { Typography } from '@mui/material';
 import { CardContent} from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { IconButton } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import { AddToLib } from '../AddToLib';
+import {Link} from 'react-router-dom';
+
 interface cardprops{
     id?:number;
     image:string;
@@ -14,29 +17,32 @@ interface cardprops{
     author:string;
     time:string;
     reads?:string | undefined;
+    status?:boolean;
+    progress:number;
 
 }
 
-const BookCard:React.FC<cardprops> = ({image,reads,title,author,time}) => {
+const BookCard:React.FC<cardprops> = ({image,reads,title,author,time,status,progress}) => {
     return (
         <Grid item xs={4}>
-            <Card  sx={{
-                width:285,height:466,
+             <Card  sx={{
+                width:284,height:466,
                 borderRadius:2,
                 border: '1 solid #E1ECFC',
                 background: "#FFFFFF",
                 }}>
-                    <CardMedia 
+                    <Link to="/Entrepreneurship/BookDetailsView"><CardMedia 
                             component="img"
                             image={image}
                             alt="book pic"
                             height="292px"
                             width="294.1px"
-                        
-                        />
-                    <CardContent sx={{height:95,width:255}}>
+                            
+
+                        /></Link>
+                    <CardContent>
                         <Typography  sx={{
-                        width:250,
+                        width:225,
                         height:23,
                         fontFamily:'Cera Pro',
                         fontWeight: 'bold',
@@ -44,13 +50,13 @@ const BookCard:React.FC<cardprops> = ({image,reads,title,author,time}) => {
                         textAlign:'left',
 
                         }}
-                         variant="subtitle1"  color='#03314B' component="h6">
+                         variant="subtitle1"  color='#03314B'>
                             {title}
                         </Typography>
                     
                         <Typography sx={{
                             height:20,
-                            width:250,
+                            width:230,
                             fontFamily:'Cera Pro',
                             fontSize:16,
                             textAlign:'left',
@@ -60,7 +66,7 @@ const BookCard:React.FC<cardprops> = ({image,reads,title,author,time}) => {
                             {author}
                         </Typography>
                         <br/>
-                        <Box sx={{display:"flex",justifyContent:"space-between"}}>
+                        <Box sx={{display:"flex",justifyContent:"space-between",height:18}}>
                             <Box sx={{display:"flex",alignItems:'center'}}>
                                         <AccessTimeIcon fontSize='small'/>
                                     <Typography sx={{fontSize:14,fontFamily:'Cera Pro'}} variant='caption2' color="#6D787E">{time}-minute read</Typography>
@@ -74,19 +80,20 @@ const BookCard:React.FC<cardprops> = ({image,reads,title,author,time}) => {
                                 
                             </Box>}
                         </Box>
-                        <Box sx={{display:'flex',float:'right',height:24,width:24,color:'#042330',mt:3}}>
+                      {!status &&  <Box sx={{display:'flex',float:'right',height:4,width:24,color:'#042330',mt:3}}>
                                     <IconButton>
                                     <strong> <MoreHorizIcon fontSize='medium'/></strong>
                                     </IconButton>
-                        </Box>
+                        </Box>}
+                       {status && <AddToLib/>}
                     </CardContent>
                      <Box sx={{
                          width:300,height:15,
                          bgcolor:'#F1F6F4',
-                         mt:4.4,
+                         mt:3.5,
                          boxSizing:'border-box',
                          }}>
-                             <Box sx={{width:'88',height:'15', bgcolor:'#E1ECFC'}}>
+                             <Box sx={{width:progress,height:15, bgcolor:'#E1ECFC'}}>
                                 
                              </Box>
 

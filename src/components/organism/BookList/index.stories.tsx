@@ -1,19 +1,19 @@
 import React from 'react';
 import { Meta} from '@storybook/react';
-import Header from ".";
+import { BookList } from '.';
 import { BrowserRouter } from 'react-router-dom';
 
 
+
 export default {
-    title: 'organisms/Header',
-    component: Header,
+    title: 'organisms/BookList',
+    component: BookList,
   } as Meta;
 
 export  const primary= ()=> {
     return(
-        <BrowserRouter>
-            <Header/>
-        
-        </BrowserRouter>
+            <BrowserRouter>
+                <BookList/>
+            </BrowserRouter>
     );
 }
