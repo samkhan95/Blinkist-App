@@ -4,11 +4,8 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from './Theme/Theme';
 import { Entrepreneurship } from './components/Pages/Enterpreneurship  page';
 import Home from './components/Pages/Home/Home';
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route} from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { BookDetailsView } from './components/Pages/BookDetailsView';
-import Header from './components/organism/Header';
-import { BookList } from './components/organism/BookList';
 
 
 
@@ -32,9 +29,3 @@ function App() {
 
 export default App;
 
-
-
-{/* <Box sx={{display:'flex',justifyContent:'center'}}>
-<Header/>
-
-</Box> */}

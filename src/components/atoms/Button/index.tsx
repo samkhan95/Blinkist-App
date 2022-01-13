@@ -2,8 +2,8 @@ import { Button } from "@mui/material";
 
 
 export interface ButtonProps{
-  variant?:"text" | "outlined" | "contained" | undefined;
-  size?:"small" | "medium" | "large" | undefined;
+  variant?:"text" | "outlined" | "contained";
+  size?:"small" | "medium" | "large";
   children:any;
   color?:string;
   onClick?: ()=>void;

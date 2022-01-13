@@ -1,11 +1,8 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import { Box, CardMedia, Grid} from '@mui/material';
-import { Typography } from '@mui/material';
-import { CardContent} from '@mui/material';
+import { Box, CardMedia, Grid, Typography, CardContent, IconButton} from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import { IconButton } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { AddToLib } from '../AddToLib';
 import {Link} from 'react-router-dom';
@@ -16,7 +13,7 @@ interface cardprops{
     title:string;
     author:string;
     time:string;
-    reads?:string | undefined;
+    reads?:string;
     status?:boolean;
     progress?:number;
 

@@ -2,10 +2,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import { Button, Container, Typography } from '@mui/material';
+import { Button, Container, Typography,Avatar } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import img from './blinkist.png';
-import { Avatar } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import ExpandNav from '../../molecules/Expandnav';
 import { Link } from 'react-router-dom';

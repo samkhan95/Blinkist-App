@@ -1,6 +1,5 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, styled, Typography,Container } from '@mui/material';
 import img1 from './blinkist.png';
-import { Container } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export const StyledTypography = styled(Typography)`

@@ -1,8 +1,7 @@
 import ExpandNav from ".";
-import {fireEvent,render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import { BrowserRouter } from "react-router-dom";
 
-const handleClose = jest.fn;
 
 const MockExpandNav = () => {
   return (

@@ -1,5 +1,5 @@
 import BookCard from ".";
-import { fireEvent, getByTestId, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from "react-router-dom";
 
 const MockBookCard = () => {

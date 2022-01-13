@@ -1,5 +1,5 @@
 import { AddToLib } from ".";
-import { fireEvent,render,screen } from "@testing-library/react";
+import {render,screen } from "@testing-library/react";
 
 describe('<AddToLib>',()=>{
     test('check the text of AddToLib',()=>{
