@@ -1,4 +1,4 @@
-import AddToFinish from "./AddBookToFinished";
+import AddToFinish from "./AddBook";
 
 import { combineReducers } from "redux";
 export {};

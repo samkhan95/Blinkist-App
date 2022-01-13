@@ -7,7 +7,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { AddToLib } from '../AddToLib';
 import {Link} from 'react-router-dom';
 
-interface cardprops{
+interface BookCardprops{
     id?:number;
     image:string;
     title:string;
@@ -19,7 +19,7 @@ interface cardprops{
 
 }
 
-const BookCard:React.FC<cardprops> = ({image,reads,title,author,time,status,progress}) => {
+const BookCard:React.FC<BookCardprops> = ({image,reads,title,author,time,status,progress}) => {
     return (
         <Grid item xs={4}>
              <Card  data-testid="card" sx={{

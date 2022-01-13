@@ -3,7 +3,7 @@ type actionOptions ={
     type: string
 }
 
-const AddToFinish = (action:actionOptions,state = initialState) => {
+const AddToFinish = (state = initialState,action:actionOptions) => {
     switch (action.type) {
         case "ADD": return !state;
         default: return state;
