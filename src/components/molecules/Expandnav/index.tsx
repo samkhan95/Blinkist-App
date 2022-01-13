@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { Divider, IconButton, IconButtonProps, Stack, styled } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Container } from '@mui/material';
@@ -24,7 +23,7 @@ const style = {
   position: 'absolute' as 'absolute',
   top: '88%',
   left: '-30%',
-  width: 1430,
+  width: 1833,
   height:398,
   bgcolor: '#F1F6F4',
   border: '2px solid #000',
@@ -38,13 +37,6 @@ const FBox = styled(Box)`
 
   }
 `;
-
-const Constyle = {
-  width:920,
-  height:398,
-  pt:'30px',
-  pb:'32px',
-}
 
 const HeadTypography = styled(Typography)`
   font-size:16px;
@@ -109,7 +101,7 @@ export default function ExpandNav() {
 
   return (
     <>
-        <Button onClick={handleOpen} sx={{textTransform:'none'}}>
+        <Button onClick={handleOpen} sx={{textTransform:'none'}} data-testid="expand">
           <UBox sx={{display:'flex',alignItems:'center',borderBottom:'4px solid white'}}>
                     <Typography sx={{color:"black",cursor:'pointer'}} fontSize={16}>
                             Explore
@@ -125,9 +117,10 @@ export default function ExpandNav() {
           </UBox>
 
         </Button>
-       {open && <Box onClick={handleClose} sx={{zIndex:100,width:1440}}>
+       {open && <Box onClick={handleClose} sx={{zIndex:100,width:1440}} data-testid="popup">
           <Box sx={style}>
-            <Container sx={Constyle}>
+            <Container sx={{pt:2}}>
+            <Box sx={{ml:3.3}}>
               <Stack direction='row' spacing='130px' sx={{pb:'24px'}}>
                   <HeadTypography >
                     Explore by category
@@ -258,6 +251,7 @@ export default function ExpandNav() {
                   </FBox>
               </Stack>
             </Box>
+          </Box>
           </Container>
         </Box>
       </Box>}

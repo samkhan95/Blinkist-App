@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, styled, Typography } from "@mui/material";
 import img from './bannerImage.png'
 
@@ -13,9 +12,9 @@ const StyledTypography = styled(Typography)`
 export const Banner =()=>{
     return(
         <>  
-        <Box sx={{width:1440,mb:'58px'}}>
-                <Container sx={{width:882}}>
-                    <Box sx={{width:912,height:264,bgcolor:'#F1F6F4',display:'flex',justifyContent:"space-around"}}>
+        {/* <Box sx={{width:1440,mb:'58px'}}> */}
+                <Container sx={{width:1145,mt:'52px'}}>
+                    <Box sx={{height:264,bgcolor:'#F1F6F4',display:'flex',justifyContent:"space-around",mb:'58px'}} data-testid="banner">
                         <Box >
                             <Box sx={{width:319,height:90,mt:"45px",mb:'15px'}}>
                                 <StyledTypography variant="h1"> 
@@ -38,8 +37,6 @@ export const Banner =()=>{
                      </Box>
 
                 </Container>
-
-        </Box>
             
         </>
 

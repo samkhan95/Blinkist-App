@@ -5,15 +5,17 @@ import books from "../../../data/db1.json";
 export const BookList =()=>{
     return(
       <>
-      <Box sx={{maxWidth:1440,maxHeight:1443}}>
-          <Container sx={{width:923,ml:-6}}>
-              <Grid container rowSpacing='25px' columnSpacing={{ xs: 12, sm: 12, md: 12 }}>
-                {books.map((book) => (
-                  <BookCard {...book} />
-                ))}
-              </Grid>
+      {/* <Box sx={{maxWidth:1440,maxHeight:1443}}> */}
+          <Container>
+            <Box sx={{ml:-5}} data-testid="blist">
+              <Grid container rowSpacing='25px'>
+                  {books.map((book) => (
+                    <BookCard {...book} />
+                  ))}
+                </Grid>
+            </Box>
+            
           </Container>
-        </Box>
 
         </>
 

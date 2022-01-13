@@ -1,4 +1,4 @@
-const initialState = 0;
+const initialState = false;
 type actionOptions ={
     type: string
 }

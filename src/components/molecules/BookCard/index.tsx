@@ -18,20 +18,20 @@ interface cardprops{
     time:string;
     reads?:string | undefined;
     status?:boolean;
-    progress:number;
+    progress?:number;
 
 }
 
 const BookCard:React.FC<cardprops> = ({image,reads,title,author,time,status,progress}) => {
     return (
         <Grid item xs={4}>
-             <Card  sx={{
+             <Card  data-testid="card" sx={{
                 width:284,height:466,
                 borderRadius:2,
                 border: '1 solid #E1ECFC',
                 background: "#FFFFFF",
                 }}>
-                    <Link to="/Entrepreneurship/BookDetailsView"><CardMedia 
+                    <Link data-testId ="bookLink" to="/Entrepreneurship/BookDetailsView"><CardMedia 
                             component="img"
                             image={image}
                             alt="book pic"
@@ -90,7 +90,7 @@ const BookCard:React.FC<cardprops> = ({image,reads,title,author,time,status,prog
                      <Box sx={{
                          width:300,height:15,
                          bgcolor:'#F1F6F4',
-                         mt:3.5,
+                         mt:4,
                          boxSizing:'border-box',
                          }}>
                              <Box sx={{width:progress,height:15, bgcolor:'#E1ECFC'}}>

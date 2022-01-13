@@ -6,19 +6,16 @@ export interface ButtonProps{
   size?:"small" | "medium" | "large" | undefined;
   children:any;
   color?:string;
-  onClick?: React.MouseEvent<HTMLButtonElement> | undefined;
+  onClick?: ()=>void;
   hoverColor?:string;
   
 }
-const handleClick = (event: React.MouseEvent<HTMLElement>, text: string) => {
-  alert(event.target);
-  console.log(text);
-};
 
-const ButtonComponent = ({variant,children,hoverColor,color,size}:ButtonProps) => {
+
+const ButtonComponent = ({variant,children,hoverColor,color,size,onClick}:ButtonProps) => {
   return(
-    <Button size={size} variant={variant} onClick={(e)=>{handleClick(e,"clicked")}} 
-    sx={{color:{color}}}>
+    <Button size={size} variant={variant} data-testid="2" onClick={onClick} 
+    sx={{color:{color},textTransform:'none',fontSize:'14px'}}>
       {children}
     </Button>
     );

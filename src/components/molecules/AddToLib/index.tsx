@@ -28,7 +28,7 @@ export const AddToLib = ()=>{
 
         <StyledBox>
             <AddIcon sx={{pr:2}}/>
-            <Typography fontSize='16px' fontFamily="Cera Pro">
+            <Typography fontSize='16px' fontFamily="Cera Pro" data-testid="AddButton">
                 Add to lib
             </Typography>
 

@@ -32,14 +32,14 @@ const BookView = ()=>{
     return(
         <>
     
-        <Box sx={{maxWidth:1440,maxHeight:1443,mt:'80px',ml:3}}>
-            <Container sx={{width:924}}>
-                    <Box sx={{width:180,height:20,mb:'40px'}}>
+        {/* <Box sx={{maxWidth:1440,maxHeight:1443,mt:'80px',ml:3}}> */}
+            <Container sx={{mt:'80px'}} data-testid="bview">
+                    <Box sx={{width:180,height:20,mb:'40px',ml:4}}>
                             <StyledTypography variant="body2" fontSize="16px"sx={{color:'#03314B'}} >
                                 Get the key ideas from
                             </StyledTypography>
                     </Box>
-                <Box sx={{display:'flex',justifyContent:'space-between',mb:"70px",width:934}}>
+                <Box sx={{display:'flex',justifyContent:'space-between',mb:"70px",ml:4}}>
                     <Box>
                     <Box sx={{width:496,height:45,mb:'24px'}}>
                         <StyledTypography variant="h1" fontSize="36px" fontWeight={700}   sx={{color:'#03314B'}} >
@@ -64,7 +64,7 @@ const BookView = ()=>{
                     </Box>
                     <Stack direction="row" spacing={3}>
                             <Button sx={{border:'1px solid #042330',height:44,width:122,color:'#22C870',borderRadius:'4px',fontSize:'16px'}}>Read Now</Button>
-                            <Link to="/" style={{textDecoration:'none'}}><StyledButton onClick={() => dispatch(AddToFinish())}>Finished Reading</StyledButton></Link>
+                            <Link data-testid="viewlink" to="/" style={{textDecoration:'none'}}><StyledButton onClick={() => dispatch(AddToFinish())}>Finished Reading</StyledButton></Link>
                             <Box sx={{display:'inline-flex',alignItems:'center'}}>
                                 <Button sx={{fontSize:'16px',color:'#03314B'}}>Send to Kindle</Button>
                                 <ArrowRightAltOutlinedIcon/>
@@ -79,7 +79,6 @@ const BookView = ()=>{
             <BookInfo/>
 
           </Container>
-        </Box>  
                 
     </>
 

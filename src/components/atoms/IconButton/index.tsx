@@ -7,7 +7,7 @@ export interface IconButtonProps{
 }
 
 const IconButtonComponent = ({children}:IconButtonProps) =>(
-    <IconButton>
+    <IconButton data-textid="3">
       {children}
     </IconButton>
   );

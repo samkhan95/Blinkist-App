@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Container, styled } from '@mui/material';
 import { BookList } from '../BookList';
-import Finished from '../../Pages/Finished';
+import Finished from '../Finished';
 
 
 
@@ -53,33 +53,35 @@ export default function BookState() {
   };
 
   return (
-          <Box sx={{width:1440,mt:'70px'}}>
-              <Container sx={{width:921,height:1563}}>
-                  <Box sx={{width:200,height:45,mb:'60px'}}>
-                          <Typography variant="h1" sx={{ fontSize: 36, fontWeight: 700,fontFamily:"Cera Pro",ml:2.5 }}>
-                            My Library
-                          </Typography>
-                  </Box>
-                  <Box sx={{ width: '100%',ml:2.3 }}>
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                      <Tabs value={value} onChange={handleChange} sx={{maxWidth:'921px'}}
-                          textColor='primary'
-                          indicatorColor="primary"
-                      >
-                        <StyledTab disableRipple label={<Box sx={{display:'flex',justifyContent:'flex-start',width:'340px'}}><Typography fontFamily='Cera Pro'>Currently reading</Typography></Box>}  />
-                        <StyledTab disableRipple label={<Box sx={{display:'flex',justifyContent:'flex-start',width:'340px'}}><Typography fontFamily='Cera Pro'>Finished</Typography></Box>} />
-                      </Tabs>
+          // <Box sx={{width:1440,mt:'70px'}}>
+              <Container>
+                  <Box sx={{ml:1.5,mt:'70px'}} data-testid="bstate">
+                    <Box sx={{width:200,height:45,mb:'60px'}}>
+                            <Typography variant="h1" sx={{ fontSize: 36, fontWeight: 700,fontFamily:"Cera Pro",ml:2.5 }}>
+                              My Library
+                            </Typography>
                     </Box>
-                    <TabPanel value={value} index={0} >
-                        {value === 0 && <BookList/>}
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
-                      {value ===1 && <Finished/>}
-                    </TabPanel>
+                    <Box sx={{ width: '100%',ml:2.3 }}>
+                      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <Tabs value={value} onChange={handleChange} sx={{maxWidth:'921px'}}
+                            textColor='primary'
+                            indicatorColor="primary"
+                        data-testid="tabs">
+                          <StyledTab disableRipple label={<Box sx={{display:'flex',justifyContent:'flex-start',width:'340px'}}><Typography fontFamily='Cera Pro'>Currently reading</Typography></Box>}  />
+                          <StyledTab disableRipple label={<Box sx={{display:'flex',justifyContent:'flex-start',width:'340px'}}><Typography fontFamily='Cera Pro'>Finished</Typography></Box>} />
+                        </Tabs>
+                      </Box>
+                      <TabPanel value={value} index={0} >
+                          {value === 0 && <BookList/>}
+                      </TabPanel>
+                      <TabPanel value={value} index={1}>
+                        {value ===1 && <Finished/>}
+                      </TabPanel>
+                     </Box>
+
                   </Box>
-                  
               </Container>
-        </Box>
+
 
   );
 }

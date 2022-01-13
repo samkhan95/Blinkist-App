@@ -9,7 +9,7 @@ const BlueAvatar = styled(Avatar)`
 `;
 const AvatarComponent = ({label}:AvatarProps)=>{
     return(
-        <BlueAvatar>
+        <BlueAvatar data-testid="1">
             {label}
         </BlueAvatar>
     );

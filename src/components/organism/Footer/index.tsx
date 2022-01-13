@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from '@mui/material';
-import Button from '../../atoms/Button';
 import img1 from './blinkist.png';
 import { Container } from '@mui/material';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export const StyledTypography = styled(Typography)`
     line-height:2;
@@ -16,10 +16,10 @@ export const StyledTypography = styled(Typography)`
 const Footer = () => {
     return (
         <>
-        <Box sx={{bgcolor:'#F1F6F4',maxWidth:1440,maxHeight:370,mt:'111px'}}>
-            <Container sx={{width:1040}}>
-                <Box sx={{bgcolor:'#F1F6F4',pt:'38px',height:300}}>
-                    <Box sx={{display:'flex',justifyContent:'space-around'}}>
+        <Box sx={{bgcolor:'#F1F6F4'}} data-testid="footer">
+            <Container sx={{bgcolor:'#F1F6F4',mt:'111px'}}>
+                <Box sx={{bgcolor:'#F1F6F4',pt:'38px',height:300,pb:'38px'}}>
+                    <Box sx={{display:'flex',justifyContent:'space-between',ml:1.5}}>
                         <Box>
                             <Box sx={{width:'99px',height:'24px',pb:'32px'}}>
                                 <img src={img1} alt="Blinkist logo" width='99.1px' height='44px' />
@@ -53,12 +53,32 @@ const Footer = () => {
                                     <StyledTypography>Code of Conduct</StyledTypography>
                             </Box>
                     </Box>
-                        <Box>
-                            <Button color='black' children="Blinkist 2021"/> |
-                            <Button color='black' children="Sitemap"/> |
-                            <Button color='black' children="Disclaimer"/> |
-                            <Button color='black' children="Terms of service"/> |
-                            <Button color='black' children="Privacy Policies"/>
+                        <Box sx={{display:'flex',ml:2}}>
+                            <Box sx={{display:'flex',alignItems:'center'}}>
+                            <CopyrightIcon fontSize='small'/>
+                                <Typography sx={{color:'#6D787E',pl:'2.5px'}}>
+                                Blinkist 2021 Sitemap 
+                                </Typography>
+                            </Box>
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                                |
+                            </Typography>
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                                 Imprint 
+                            </Typography  >
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                                |
+                            </Typography>
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                             Terms of services 
+                            </Typography>
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                                |
+                            </Typography>
+                            <Typography sx={{ml:2,color:'#6D787E'}}>
+                                Privacy Polices
+                            </Typography>
+                            
                         </Box>
                         
                 </Box>
@@ -69,3 +89,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

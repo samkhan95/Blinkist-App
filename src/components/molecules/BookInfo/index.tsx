@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material';
+import { Container, styled } from '@mui/material';
 
 
 
@@ -58,9 +58,10 @@ export default function BookInfo() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} sx={{maxWidth:600}}
+    // <Box sx={{ width: '100%' }}>
+    <Container>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} data-testid="info">
+        <Tabs value={value} onChange={handleChange} sx={{maxWidth:700}}
             indicatorColor="primary"
         >
           <StyledTab disableRipple label={<Box sx={{display:'flex',justifyContent:'flex-start',color:'black'}}><Typography fontFamily='Cera Pro'>Sypnosis</Typography></Box>} {...a11yProps(0)}  />
@@ -81,6 +82,6 @@ export default function BookInfo() {
       <TabPanel value={value} index={2}>
         
       </TabPanel>
-    </Box>
+    </Container>
   );
 }

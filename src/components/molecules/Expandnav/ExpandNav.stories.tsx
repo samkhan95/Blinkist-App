@@ -1,6 +1,5 @@
-import React from 'react';
 import { Meta} from '@storybook/react';
-import ExpandNav from './ExpandNav';
+import ExpandNav from '.';
 import { BrowserRouter } from 'react-router-dom';
 
 
