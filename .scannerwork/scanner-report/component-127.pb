@@ -1,0 +1,1 @@
+ 2tsXhr0src/components/organism/Footer/index.stories.tsx

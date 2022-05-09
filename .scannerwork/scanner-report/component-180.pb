@@ -1,0 +1,1 @@
+´ (2tsXhr-src/components/organism/Banner/index.test.tsx

@@ -1,0 +1,101 @@
+[
+        
+          {
+            "id": 1,
+            "title": "Loving Your Business",
+            "author": "Debbie King",
+            "time": "13",
+            "reads":"",
+            "image": "/images/img6.png",
+            "status":false,
+            "progress":88
+
+          },
+          {
+            "id": 2,
+            "title": "The Lonely Century",
+            "author": "Noreena Hertz",
+            "time": "15",
+            "reads":"",
+            "image": "/images/img7.png",
+            "status":false,
+            "progress":88
+
+
+          },
+          {
+            "id": 3,
+            "title": "Eat Better, Feel Better",
+            "author": "Giada De Laurentiis",
+            "time": "13",
+            "reads":"1.9k",
+            "image": "/images/img8.png",
+            "status":false,
+            "progress":88
+
+          },
+          {
+            "id": 4,
+            "title": "Dropshipping",
+            "author": "James Moore",
+            "time": "12",
+            "reads":"",
+            "image": "/images/img9.png",
+            "status":false,
+            "progress":88
+
+          },
+          {
+            "id": 5,
+            "title": "Being Boss",
+            "author": "Kathleen Shannon and Emily...",
+            "time": "13",
+            "reads":"",
+            "image": "/images/img1.png",
+            "status":false,
+            "progress":88
+          },
+          {
+              "id": 6,
+              "title": "Beyond Entrepreneurship",
+              "author": "Jim Collins & Bill Lazier",
+              "time": "13",
+              "reads":"1.9k",
+              "image": "/images/img2.png",
+              "status":false,
+              "progress":88
+  
+            },
+            {
+              "id": 7,
+              "title": "Jim Collins & Bill Lazier",
+              "author": "Steve Glaveski",
+              "time": "14",
+              "reads":"1.9k",
+              "image": "/images/img3.png",
+              "status":false,
+              "progress":88
+            },
+            {
+              "id": 8,
+              "title": "The Fate of Food",
+              "author": "Amanda Little",
+              "time": "12",
+              "reads":"16k",
+              "image": "/images/img4.png",
+              "status":false,
+              "progress":88
+  
+            },
+            {
+              "id": 9,
+              "title": "Lives of the Stoics",
+              "author": "Ryan Holiday, Stephen Hansel",
+              "time": "13",
+              "reads":"",
+              "image": "/images/img5.png",
+              "status":false,
+              "progress":88
+  
+            }
+    ]

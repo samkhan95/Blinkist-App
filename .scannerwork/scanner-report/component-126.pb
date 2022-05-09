@@ -1,0 +1,1 @@
+~ 2tsX0hr(src/components/organism/Banner/index.tsx

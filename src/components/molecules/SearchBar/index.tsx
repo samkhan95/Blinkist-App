@@ -16,7 +16,7 @@ export const SearchField = ()=>{
                         </Box>
                         <Box sx={{width:658}}>
                             <Divider sx={{border:'2px solid #6D787E',bgcolor:'#6D787E'}}/>
-
+                
                         </Box>
                     </Box>
 

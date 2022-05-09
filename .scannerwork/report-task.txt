@@ -1,0 +1,7 @@
+organization=samkhan95
+projectKey=asdf1234lkjh
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.26204
+dashboardUrl=https://sonarcloud.io/dashboard?id=asdf1234lkjh
+ceTaskId=AX586-0S8sXc6fhjqbJi
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX586-0S8sXc6fhjqbJi

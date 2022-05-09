@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { theme } from './Theme/Theme';
+import { theme } from './Theme';
 import { Entrepreneurship } from './components/Pages/Enterpreneurship  page';
 import Home from './components/Pages/Home/Home';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
