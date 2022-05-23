@@ -21,15 +21,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
-        cache: 'yarn'
+        cache: 'npm'
     - name: install dependencies
       id: install-dependencies
-      run: yarn install
+      run: npm install
     - name: Build UI
       id: build-ui
-      run: yarn run build
+      run: npm run build
     - name: run lint
       id: run-lint
-      run: yarn run lint
+      run: npm run lint
     - name: eslint
       uses: icrawl/action-eslint@v1
