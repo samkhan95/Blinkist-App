@@ -1,11 +1,35 @@
-name: CI
-on: push
+name: Lint  on pull requests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: "*"
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: environment-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn
-    - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        cache: 'yarn'
+    - name: install dependencies
+      id: install-dependencies
+      run: yarn install
+    - name: Build UI
+      id: build-ui
+      run: yarn run build
+    - name: run lint
+      id: run-lint
+      run: yarn run lint
+    - name: eslint
+      uses: icrawl/action-eslint@v1
