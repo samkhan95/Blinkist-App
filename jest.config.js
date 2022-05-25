@@ -8,7 +8,6 @@ module.exports = {
   coverageDirectory: "coverage",
   collectCoverage: true,
   collectCoverageFrom: ["src/**/*.{js,jsx}", "!src/**/*stories.{js,jsx}"],
-  setupFiles: ["./src/SetupTests.js"],
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
     ".story.js",
