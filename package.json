@@ -30,11 +30,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --coverage",
+    "test": "react-scripts test ",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:ci": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
+    "test:ci": "npm test -- --coverage --watchAll --testResultsProcessor ./node_modules/jest-sonar-reporter",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier {*,src/*,src/**/*} --write --ignore-unknown",
