@@ -1,3 +1,4 @@
+import React from "react";
 import { AddToLib } from ".";
 import {render,screen } from "@testing-library/react";
 
@@ -5,7 +6,7 @@ describe('<AddToLib>',()=>{
     test('check the text of AddToLib',()=>{
           render(<AddToLib/>);
         const name = screen.getByTestId('AddButton')
-       expect(name.textContent).toBe("Add to lib");
+        expect(name).toBeInTheDocument();
         
 
 
