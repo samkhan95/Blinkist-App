@@ -1,3 +1,4 @@
+import React from 'react';
 import { Avatar, styled } from "@mui/material";
 
 export interface AvatarProps{

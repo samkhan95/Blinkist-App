@@ -1,1 +1,0 @@
-š 2tsXhr5src/components/Pages/Enterpreneurship  page/index.tsx

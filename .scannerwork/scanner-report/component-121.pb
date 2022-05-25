@@ -1,1 +1,0 @@
-y 2tsX3hr(src/components/organism/Header/index.tsx

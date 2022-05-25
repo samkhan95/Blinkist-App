@@ -1,1 +1,0 @@
-| 2tsXhr0src/components/organism/Banner/index.stories.tsx

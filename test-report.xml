@@ -1,68 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/samadk/blinkist-app/src/components/organism/Header/index.test.tsx">
-    <testCase name="&lt;MockHeader&gt; check if it is present" duration="393"/>
-    <testCase name="&lt;MockHeader&gt; check if it is truthy" duration="58"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/molecules/AddToLib/index.test.tsx">
+    <testCase name="&lt;AddToLib&gt; check the text of AddToLib" duration="126">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "Add to lib"
+Received: "Add to library"
+    at Object.<anonymous> (/home/samadk/react/blinkist-app/src/components/molecules/AddToLib/index.test.tsx:8:33)
+    at Promise.then.completed (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:60:9)
+    at run (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/runTest.js:475:34)
+    at Object.worker (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
+    </testCase>
+    <testCase name="&lt;AddToLib&gt; check if AddToLib is truthy" duration="21"/>
+    <testCase name="&lt;AddToLib&gt; check if AddToLib is present" duration="18"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/Banner/index.test.tsx">
-    <testCase name="&lt;Banner&gt; check the if is present" duration="87"/>
-    <testCase name="&lt;Banner&gt; check the if is truthy" duration="15"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/atoms/Button/index.test.tsx">
+    <testCase name="&lt;Button&gt; check the buttom name" duration="167">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality"><![CDATA[Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "Click Me"
+Received: "children=Click Me"
+    at Object.<anonymous> (/home/samadk/react/blinkist-app/src/components/atoms/Button/index.test.tsx:9:30)
+    at Promise.then.completed (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:60:9)
+    at run (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/samadk/react/blinkist-app/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/runTest.js:475:34)
+    at Object.worker (/home/samadk/react/blinkist-app/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
+    </testCase>
+    <testCase name="&lt;Button&gt; Checking the click" duration="36"/>
+    <testCase name="&lt;Button&gt; checking the function call" duration="45"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/Footer/index.test.tsx">
-    <testCase name="&lt;Footer&gt; check if it is present" duration="139"/>
-    <testCase name="&lt;Footer&gt; check if it is truthy" duration="52"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/BookView/index.test.tsx">
+    <testCase name="&lt;BookList&gt; check if it is present" duration="672"/>
+    <testCase name="&lt;BookList&gt; check if it is truthy" duration="136"/>
+    <testCase name="&lt;BookList&gt; check if the link is defined" duration="100"/>
+    <testCase name="&lt;BookList&gt; check if the link is truthy" duration="124"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/StateOfBook/index.test.tsx">
-    <testCase name="&lt;MockBookState&gt; check if it is present" duration="645"/>
-    <testCase name="&lt;MockBookState&gt; check if it is truthy" duration="228"/>
-    <testCase name="&lt;MockBookState&gt; check if tabs are defined" duration="204"/>
-    <testCase name="&lt;MockBookState&gt; check if tabs are Truthy" duration="176"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/StateOfBook/index.test.tsx">
+    <testCase name="&lt;MockBookState&gt; check if it is present" duration="935"/>
+    <testCase name="&lt;MockBookState&gt; check if it is truthy" duration="357"/>
+    <testCase name="&lt;MockBookState&gt; check if tabs are defined" duration="356"/>
+    <testCase name="&lt;MockBookState&gt; check if tabs are Truthy" duration="321"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/molecules/BookCard/index.test.tsx">
-    <testCase name="&lt;BookCard&gt; check the card props" duration="264"/>
-    <testCase name="&lt;BookCard&gt; check if the card exits" duration="37"/>
-    <testCase name="&lt;BookCard&gt; check if link is present" duration="29"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/molecules/Expandnav/index.test.tsx">
+    <testCase name="&lt;ExpandNav&gt; check the if is present" duration="331"/>
+    <testCase name="&lt;ExpandNav&gt; check the if is truthy" duration="43"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/BookView/index.test.tsx">
-    <testCase name="&lt;BookList&gt; check if it is present" duration="307"/>
-    <testCase name="&lt;BookList&gt; check if it is truthy" duration="85"/>
-    <testCase name="&lt;BookList&gt; check if the link is defined" duration="69"/>
-    <testCase name="&lt;BookList&gt; check if the link is truthy" duration="69"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/Header/index.test.tsx">
+    <testCase name="&lt;MockHeader&gt; check if it is present" duration="482"/>
+    <testCase name="&lt;MockHeader&gt; check if it is truthy" duration="85"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/molecules/Expandnav/index.test.tsx">
-    <testCase name="&lt;ExpandNav&gt; check the if is present" duration="280"/>
-    <testCase name="&lt;ExpandNav&gt; check the if is truthy" duration="28"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/atoms/Avatar/index.test.tsx">
+    <testCase name="App check the Avatar name" duration="76"/>
+    <testCase name="App check the Avatar is defined" duration="11"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/BookList/index.test.tsx">
-    <testCase name="&lt;BookList&gt; check if it is present" duration="351"/>
-    <testCase name="&lt;BookList&gt; check if it is truthy" duration="184"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/EntrepreneurBooks/index.test.tsx">
+    <testCase name="&lt;MockBooks&gt; check if it is present" duration="550"/>
+    <testCase name="&lt;MockBooks&gt; check if it is truthy" duration="298"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/Finished/index.test.tsx">
-    <testCase name="&lt;MockFinished&gt; check if it is present" duration="41"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/molecules/BookCard/index.test.tsx">
+    <testCase name="&lt;BookCard&gt; check the card props" duration="348"/>
+    <testCase name="&lt;BookCard&gt; check if the card exits" duration="51"/>
+    <testCase name="&lt;BookCard&gt; check if link is present" duration="50"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/BookInfo/index.test.tsx">
+    <testCase name="&lt;BookInfo&gt; check the if is present" duration="221"/>
+    <testCase name="&lt;BookInfo&gt; check the if is truthy" duration="95"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/BookList/index.test.tsx">
+    <testCase name="&lt;BookList&gt; check if it is present" duration="778"/>
+    <testCase name="&lt;BookList&gt; check if it is truthy" duration="301"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/Footer/index.test.tsx">
+    <testCase name="&lt;Footer&gt; check if it is present" duration="166"/>
+    <testCase name="&lt;Footer&gt; check if it is truthy" duration="40"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/Banner/index.test.tsx">
+    <testCase name="&lt;Banner&gt; check the if is present" duration="106"/>
+    <testCase name="&lt;Banner&gt; check the if is truthy" duration="20"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/molecules/SearchBar/index.test.tsx">
+    <testCase name="&lt;SearchFeild&gt; check the if is present" duration="91"/>
+    <testCase name="&lt;SearchFeild&gt; check the search is truthy" duration="30"/>
+  </file>
+  <file path="/home/samadk/react/blinkist-app/src/components/organism/Finished/index.test.tsx">
+    <testCase name="&lt;MockFinished&gt; check if it is present" duration="70"/>
     <testCase name="&lt;MockFinished&gt; check if it is truthy" duration="10"/>
   </file>
-  <file path="/home/samadk/blinkist-app/src/components/atoms/Button/index.test.tsx">
-    <testCase name="&lt;Button&gt; check the buttom name" duration="98"/>
-    <testCase name="&lt;Button&gt; Checking the click" duration="18"/>
-    <testCase name="&lt;Button&gt; checking the function call" duration="34"/>
-  </file>
-  <file path="/home/samadk/blinkist-app/src/components/organism/EntrepreneurBooks/index.test.tsx">
-    <testCase name="&lt;MockBooks&gt; check if it is present" duration="398"/>
-    <testCase name="&lt;MockBooks&gt; check if it is truthy" duration="167"/>
-  </file>
-  <file path="/home/samadk/blinkist-app/src/components/molecules/SearchBar/index.test.tsx">
-    <testCase name="&lt;SearchFeild&gt; check the if is present" duration="56"/>
-    <testCase name="&lt;SearchFeild&gt; check the search is truthy" duration="13"/>
-  </file>
-  <file path="/home/samadk/blinkist-app/src/components/atoms/Avatar/index.test.tsx">
-    <testCase name="App check the Avatar name" duration="37"/>
-  </file>
-  <file path="/home/samadk/blinkist-app/src/components/molecules/AddToLib/index.test.tsx">
-    <testCase name="&lt;AddToLib&gt; check the text of AddToLib" duration="43"/>
-    <testCase name="&lt;AddToLib&gt; check if AddToLib is present" duration="19"/>
-  </file>
-  <file path="/home/samadk/blinkist-app/src/components/molecules/BookInfo/index.test.tsx">
-    <testCase name="&lt;BookInfo&gt; check the if is present" duration="108"/>
-    <testCase name="&lt;BookInfo&gt; check the if is truthy" duration="19"/>
+  <file path="/home/samadk/react/blinkist-app/src/components/atoms/IconButton/index.test.tsx">
+    <testCase name="App check the icon" duration="75"/>
+    <testCase name="App check if the icon is Truthy" duration="14"/>
   </file>
 </testExecutions>

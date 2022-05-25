@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 
 
 const style = {
-  position: 'absolute' as 'absolute',
+  position: 'absolute' as const,
   top: '88%',
   left: '-30%',
   width: 1833,

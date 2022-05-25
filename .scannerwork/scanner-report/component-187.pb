@@ -1,1 +1,0 @@
-» (2tsXhr.src/components/atoms/IconButton/index.test.tsx

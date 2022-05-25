@@ -1,1 +1,0 @@
-¹ (2tsX$hr2src/components/organism/StateOfBook/index.test.tsx

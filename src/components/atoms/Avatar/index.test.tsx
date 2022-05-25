@@ -1,3 +1,4 @@
+import React from 'react';
 import Avatar from '.';
 import { render, screen } from '@testing-library/react';
 

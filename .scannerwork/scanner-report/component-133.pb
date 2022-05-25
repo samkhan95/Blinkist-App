@@ -1,1 +1,0 @@
-… 2tsXZhr*src/components/organism/BookView/index.tsx

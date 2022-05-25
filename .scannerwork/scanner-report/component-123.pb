@@ -1,1 +1,0 @@
-{ 2tsXXhr*src/components/organism/BookInfo/index.tsx

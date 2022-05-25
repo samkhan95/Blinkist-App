@@ -1,1 +1,0 @@
-” 2tsXkhr+src/components/molecules/BookCard/index.tsx

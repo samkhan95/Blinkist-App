@@ -1,1 +1,0 @@
-º (2tsXhr/src/components/organism/Finished/index.test.tsx
