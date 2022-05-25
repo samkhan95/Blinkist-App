@@ -7,25 +7,22 @@ module.exports = {
   testEnvironment: "jsdom",
   coverageDirectory: "coverage",
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.{js,jsx}", "!src/**/*stories.{js,jsx}"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*stories.{ts,tsx}"],
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
-    ".story.js",
-    "<rootDir>/assetsTransformer.js",
+    ".story.ts",
     "<rootDir>/coverage",
-    "<rootDir>/src/assets",
-    "<rootDir>/src/utils/commandCentermockData.js",
+    "<rootDir>/src/actions",
+    "<rootDir>/src/reducers",
+    "<rootDir>/src/data",
   ],
   testPathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/coverage",
-    "<rootDir>/src/utils/commandCentermockData.js",
+    "<rootDir>/src/actions",
+    "<rootDir>/src/reducers",
+    "<rootDir>/src/data",
   ],
-  transform: {
-    "^.+\\.js?$": "babel-jest",
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "./assetsTransformer.js",
-  },
   moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
   },
