@@ -34,7 +34,11 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:ci": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter"
+    "test:ci": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier {*,src/*,src/**/*} --write --ignore-unknown",
+    "lint-staged": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +54,11 @@
           "import/no-anonymous-default-export": "off"
         }
       }
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
     ]
   },
   "browserslist": {
