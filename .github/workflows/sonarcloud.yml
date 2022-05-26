@@ -21,6 +21,9 @@ jobs:
         run: npm install
       - name: run tests
         run: npm test  -- --coverage --watchAll=false  --testResultsProcessor=jest-sonar-reporter
+      - uses: romeovs/lcov-reporter-action@v0.2.16
+        with:
+          lcov-file: ./coverage/lcov.info
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
