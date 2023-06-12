@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: Default
+  vmImage: ubuntu-latest
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      npm install
+      npm run build
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    verbose: true
+    publishRegistry: 'useFeed'
+    publishFeed: '535085bf-b9c7-4396-8e78-18ddb3ffd6cb/990c7521-444f-49eb-b7aa-0cf11e97fabf'
