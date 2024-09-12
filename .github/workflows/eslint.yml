@@ -16,20 +16,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
-        cache: 'npm'
-    - name: install dependencies
-      id: install-dependencies
-      run: npm install
-    - name: Build UI
-      id: build-ui
-      run: npm run build
-    - name: run lint
-      id: run-lint
-      run: npm run lint
-    - name: eslint
-      uses: icrawl/action-eslint@v1
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          # Need to set fetch depth to 0 for incremental diffs to grab the target branch
+          fetch-depth: '0'
+      - name: Run ESLint
+        uses: synergy-au/eslint-action@v1
+        with:
+          rules-path: './.eslintrc.json'
+          setup-from-package-json: 'true'
